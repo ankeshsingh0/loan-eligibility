@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import pandas as pd
-import pickle
+import joblib
 
 app = Flask(__name__)
 CORS(app)
 
 # Load model and scaler
-model = pickle.load(open('loan_model.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+model = joblib.load("loan_model.pkl")
+scaler = joblib.load("scaler.pkl")
 
 @app.route('/')
 def home():
