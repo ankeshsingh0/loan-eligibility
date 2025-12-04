@@ -1,5 +1,6 @@
 services:
 - type: web
   name: loan-eligibility
+  runtime: python3.10.12
   buildCommand: "pip install -r requirements.txt"
   startCommand: "gunicorn app:app"
