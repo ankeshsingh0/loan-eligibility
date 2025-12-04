@@ -1,0 +1,7 @@
+flask
+flask-cors
+pandas
+numpy
+gunicorn==23.0.0
+
+
